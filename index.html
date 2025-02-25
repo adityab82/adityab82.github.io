@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header unchanged -->
+  <!-- Header -->
   <header class="header">
     <nav>
       <ul>
@@ -59,14 +59,35 @@
       <a href="#" class="project-link" data-modal="project5-modal">
         <div class="project-item">
           <img src="WhatsApp Image 2025-02-12 at 16.06.07_d211680b.jpg" alt="Project 5 Thumbnail" class="project-image" />
-          <h3>Project 5</h3>
-          <p>Short description of Project 5.</p>
+          <h3>VGA Tetris</h3>
+          <p>Bringing retro gaming to life with Tetris on a VGA display!</p>
+        </div>
+      </a>
+      <!-- Project 6 -->
+      <a href="#" class="project-link" data-modal="project6-modal">
+        <div class="project-item">
+          <img src="IMG_4160.jpg" alt="Project 6 Thumbnail" class="project-image" />
+          <h3>Coin Picking Autonomous Robot</h3>
+          <p>An autonomous robot that detects and picks coins!</p>
         </div>
       </a>
     </div>
   </section>
 
-  <!-- About, Contact, Footer unchanged -->
+  <!-- About, Contact, Footer unchanged (assumed present in your original) -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>I’m an engineer passionate about innovative projects and modern solutions. Here’s my background, skills, and professional journey.</p>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Aditya Bansal</p>
+  </footer>
 
   <!-- Modals for Projects -->
   <div id="project1-modal" class="modal">
@@ -88,10 +109,13 @@
           <li>Joystick Calibration & Optimization</li>
           <li>SolidWorks</li>
         </ul>
-        <h3>Images</h3>
-          <img src="Screenshot 2024-09-01 102926 (1).png" alt="Project 1 Full Image" class="modal-image" />
         <h3>Video Demo</h3>
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen class="modal-video"></iframe>
+        <video controls class="modal-video">
+          <source src="BLEGamePlay.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Images</h3>
+        <img src="Screenshot 2024-09-01 102926 (1).png" alt="Project 1 Additional Image" class="modal-image" />
       </div>
     </div>
   </div>
@@ -99,7 +123,7 @@
   <div id="project2-modal" class="modal">
     <div class="modal-content">
       <span class="close" aria-label="Close modal">×</span>
-      <h2>Project 2</h2>
+      <h2>Valve Control Actuator</h2>
       <img src="ValveControl1.jpg" alt="Project 2 Full Image" class="modal-image" />
       <div class="project-details">
         <h3>Overview</h3>
@@ -115,7 +139,7 @@
         </ul>
         <h3>Video Demo</h3>
         <video controls class="modal-video">
-          <source src="project2-video.mp4" type="video/mp4">
+          <source src="Actuator.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -125,21 +149,28 @@
   <div id="project3-modal" class="modal">
     <div class="modal-content">
       <span class="close" aria-label="Close modal">×</span>
-      <h2>Project 3</h2>
+      <h2>Steering Wheel</h2>
       <img src="IMG_6329_edited.jpg" alt="Project 3 Full Image" class="modal-image" />
       <div class="project-details">
         <h3>Overview</h3>
         <p>
-          Designed a robotic arm for automated assembly lines. Programmed in C++ with ROS, it increased production speed by 30%.
+          As a firmware developer for UBC Supermileage, I contributed to enhancing the team’s urban vehicle steering system by designing and implementing key PCB and firmware updates. I integrated shift registers, a joystick, and CAN bus connections, establishing reliable hardware communication. Additionally, I developed an RTOS-based CAN fault detection system in C++ that monitored message consistency and provided real-time LCD alerts with a green-to-red status indicator for precise error detection. I also employed the SPI protocol for LCD and SD card communication using an STM32 microcontroller. Throughout the project, I rigorously debugged issues using a multimeter, oscilloscope, and software tests.
         </p>
         <h3>Technologies Used</h3>
         <ul>
           <li>C++</li>
-          <li>ROS</li>
-          <li>3D Printing</li>
+          <li>MbedOS (RTOS)</li>
+          <li>KiCad (PCB Design)</li>
+          <li>Soldering</li>
+          <li>Debugging (oscilloscope, multimeter, function generator)</li>
+          <li>SPI</li>
+          <li>CAN</li>
         </ul>
         <h3>Video Demo</h3>
-        <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen class="modal-video"></iframe>
+        <video controls class="modal-video">
+          <source src="IMG_6401.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
@@ -147,21 +178,27 @@
   <div id="project4-modal" class="modal">
     <div class="modal-content">
       <span class="close" aria-label="Close modal">×</span>
-      <h2>Project 4</h2>
+      <h2>Laser Animator Robot</h2>
       <img src="Overall.png" alt="Project 4 Full Image" class="modal-image" />
       <div class="project-details">
         <h3>Overview</h3>
         <p>
-          Developed a machine learning model to predict equipment failures in manufacturing. Achieved 95% accuracy using Python and TensorFlow.
+          This project involved creating a Laser Animation Robot designed for continuous motor control and precise mirror movements. I developed C code for a PID controller running on an RTOS, optimizing an H-bridge for smooth, accurate motion. Additionally, I built a quadrature encoder decoder in SystemVerilog on the DE1-SoC FPGA to extract position data for precise feedback. I designed a PCB in KiCad, sourced and soldered all components, and implemented a robust power and voltage regulation system—including fuses, capacitors, and switches—to ensure stable operation. Throughout development, I rigorously debugged both hardware and firmware using a multimeter, oscilloscope, and software-based tests.
         </p>
         <h3>Technologies Used</h3>
         <ul>
-          <li>Python</li>
-          <li>TensorFlow</li>
-          <li>Pandas</li>
+          <li>C (PID controller, RTOS)</li>
+          <li>SystemVerilog (Quadrature decoder on DE1-SoC FPGA)</li>
+          <li>KiCad (PCB Schematic & Layout)</li>
+          <li>H-bridge Motor Control</li>
+          <li>Power & Voltage Regulation Components (Fuses, Capacitors, Switches)</li>
+          <li>Debugging Tools (Multimeter, Oscilloscope, Software Tests)</li>
         </ul>
         <h3>Video Demo</h3>
-        <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen class="modal-video"></iframe>
+        <video controls class="modal-video">
+          <source src="LaserAnimator.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
@@ -169,26 +206,58 @@
   <div id="project5-modal" class="modal">
     <div class="modal-content">
       <span class="close" aria-label="Close modal">×</span>
-      <h2>Project 5</h2>
+      <h2>VGA Tetris</h2>
       <img src="WhatsApp Image 2025-02-12 at 16.06.07_d211680b.jpg" alt="Project 5 Full Image" class="modal-image" />
       <div class="project-details">
         <h3>Overview</h3>
         <p>
-          Created a mobile app for real-time traffic updates. Built with Flutter and integrated with Google Maps API, reducing commute times for users.
+          This project involved developing a retro-style Tetris arcade game on an FPGA, utilizing a custom VGA core for display output. Once completed, I was able to play Tetris on a VGA monitor by connecting it to my DE1-SoC (FPGA) and giving inputs from my keyboard. I ported a Xilinx-compatible VGA core to work with the DE1-SoC (Altera Cyclone V) using SystemVerilog, enabling smooth VGA signal generation. Additionally, I designed and integrated ROM and RAM modules in Quartus to store fonts and screen content. The game logic was implemented in C, optimizing gameplay for a seamless experience on a VGA monitor.
         </p>
         <h3>Technologies Used</h3>
         <ul>
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>Google Maps API</li>
+          <li>SystemVerilog (VGA Core, FPGA Development)</li>
+          <li>Quartus (ROM & RAM Integration)</li>
+          <li>Altera Cyclone V (DE1-SoC)</li>
+          <li>C (Game Logic & Software Functionality)</li>
         </ul>
         <h3>Video Demo</h3>
-        <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen class="modal-video"></iframe>
+        <video controls class="modal-video">
+          <source src="WhatsApp Video 2025-02-12 at 16.06.12_6a0fe7a4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript unchanged -->
+  <!-- Project 6 Modal  -->
+  <div id="project6-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" aria-label="Close modal">×</span>
+      <h2>Coin Picking Autonomous Robot</h2>
+      <img src="IMG_4155.jpg" alt="Project 6 Full Image" class="modal-image" />
+      <div class="project-details">
+        <h3>Overview</h3>
+        <p>
+          This project involved building a smart home automation hub using a Raspberry Pi to control lights, temperature, and security devices via a web interface. I developed a Python-based backend with Flask to handle MQTT messaging for real-time device communication. Sensors and actuators were integrated using GPIO pins, and I designed a custom 3D-printed enclosure in Fusion 360 for a polished finish. The system supports voice commands through a Google Assistant integration, making it user-friendly and efficient.
+        </p>
+        <h3>Technologies Used</h3>
+        <ul>
+          <li>Raspberry Pi</li>
+          <li>Python (Flask, MQTT)</li>
+          <li>GPIO Programming</li>
+          <li>Fusion 360 (3D Design)</li>
+          <li>Google Assistant API</li>
+        </ul>
+        <h3>Video Demo</h3>
+        <video controls class="modal-video">
+          <h3>Video Demo</h3>
+            <iframe src="https://www.youtube.com/watch?v=9QaJauieXxY&ab_channel=DAEYONGSHIN" frameborder="0" allowfullscreen class="modal-video"></iframe>
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
   <script>
     const projectLinks = document.querySelectorAll(".project-link");
     const modals = document.querySelectorAll(".modal");
